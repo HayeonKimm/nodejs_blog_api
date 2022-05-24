@@ -189,6 +189,7 @@ router.put("/lists/:title", async (req, res) => {
 router.delete("/lists/:title", async (req, res) => {
 
     const { title } = req.params;
+    const {data} = req.body;
     const { password } = req.body;
 
     const existsLists = await Lists.find({title});
